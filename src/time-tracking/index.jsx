@@ -38,8 +38,7 @@ const categoryTheme = {
 const ReportLayout = styled.div`
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(4, 15rem);
-  width: 100vw;
+  grid-template-columns: repeat(4, 1fr);
   background: ${({ theme }) => theme.color.veryDarkBlue};
 `;
 
