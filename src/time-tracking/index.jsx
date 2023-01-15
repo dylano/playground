@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyle, theme } from './styles';
+import { theme } from './styles';
 import { Category } from './components/Category';
 import { Person } from './components/Person';
 import timeData from './data.json';
@@ -40,6 +40,7 @@ const ReportLayout = styled.div`
   gap: 1.5rem;
   grid-template-columns: repeat(4, 15rem);
   width: 100vw;
+  background: ${({ theme }) => theme.color.veryDarkBlue};
 `;
 
 const PersonStyle = styled.div`
@@ -51,8 +52,6 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <GlobalStyle />
-
       <ReportLayout>
         <PersonStyle>
           <Person

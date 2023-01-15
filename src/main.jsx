@@ -5,6 +5,7 @@ import ErrorPage from './ErrorPage';
 import { GlobalStyle } from './styles';
 import Template from './template';
 import QrCode from './qr-code/';
+import TimeTracking from './time-tracking';
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: '/qr-code',
     title: 'QR Code',
     element: <QrCode />,
+  },
+  {
+    path: '/time-tracking',
+    title: 'Time Tracking',
+    element: <TimeTracking />,
   },
 ];
 
