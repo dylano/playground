@@ -30,6 +30,7 @@ const routes = [
   },
 ];
 
+// Netlify doesn't seem to like BrowserRouter, hack it with Hash instead
 const router = createHashRouter(routes);
 
 const Header = styled(Container)`
