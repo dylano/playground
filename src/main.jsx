@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import styled from 'styled-components';
 import ErrorPage from './ErrorPage';
 import { GlobalStyle } from './styles';
@@ -30,7 +30,8 @@ const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes);
+// Netlify doesn't seem to like BrowserRouter, hack it with Hash instead
+const router = createHashRouter(routes);
 
 const Header = styled(Container)`
   background: #7aaca5;
@@ -58,7 +59,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <ul>
           {routes.map((route) => (
             <li key={route.title}>
-              <a href={route.path}>{route.title}</a>
+              <a href={`#${route.path}`}>{route.title}</a>
             </li>
           ))}
         </ul>
