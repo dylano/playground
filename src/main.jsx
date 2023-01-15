@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
 import ErrorPage from './ErrorPage';
 import { GlobalStyle } from './styles';
 import Template from './template';
+import QrCode from './qr-code/';
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     title: 'Template',
     element: <Template />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/qr-code',
+    title: 'QR Code',
+    element: <QrCode />,
   },
 ];
 
